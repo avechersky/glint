@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{01A970C1-06D8-4D33-98C4-D304933B1B92}</ProjectGuid>
+    <RootNamespace>glint</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.33122.133</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Release\</OutDir>
+    <IntDir>..\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\Debug\</OutDir>
+    <IntDir>..\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <CustomBuildAfterTargets />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/glint.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>..\Release/glint.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\Release/</AssemblerListingLocation>
+      <ObjectFileName>..\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>..\Release/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>..\Release/glint.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>..\Release/glint.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>copy /Y ..\src\glint_read_me.txt ..\Release</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/glint.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>..\Debug/glint.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\Debug/</AssemblerListingLocation>
+      <ObjectFileName>..\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>..\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>..\Debug/glint.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\Debug/glint.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y ..\src\glint_read_me.txt ..\Debug</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\About.cpp" />
+    <ClCompile Include="..\src\CountersListBox.cpp" />
+    <ClCompile Include="..\src\Gadgets.cpp" />
+    <ClCompile Include="..\src\glint.cpp" />
+    <ClCompile Include="..\src\GraphValues.cpp" />
+    <ClCompile Include="..\src\HelpDlg.cpp" />
+    <ClCompile Include="..\src\Indicator.cpp" />
+    <ClCompile Include="..\src\IndicatorSettings.cpp" />
+    <ClCompile Include="..\src\IndicatorToolTip.cpp" />
+    <ClCompile Include="..\src\Label.cpp" />
+    <ClCompile Include="..\src\Panel.cpp" />
+    <ClCompile Include="..\src\PerfCount.cpp" />
+    <ClCompile Include="..\src\PerfData.cpp" />
+    <ClCompile Include="..\src\Processes.cpp" />
+    <ClCompile Include="..\src\ProcessWindow.cpp" />
+    <ClCompile Include="..\src\PropPageCounters.cpp" />
+    <ClCompile Include="..\src\PropPageGeneral.cpp" />
+    <ClCompile Include="..\src\PropPageIndicators.cpp" />
+    <ClCompile Include="..\src\RemoteConnectionDlg.cpp" />
+    <ClCompile Include="..\src\SchemaSave.cpp" />
+    <ClCompile Include="..\src\Settings.cpp" />
+    <ClCompile Include="..\src\SettingsDlg.cpp" />
+    <ClCompile Include="..\src\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\TrayIcon.cpp" />
+    <ClCompile Include="..\src\Utilities.cpp" />
+    <ClCompile Include="..\src\ValueMaxText.cpp" />
+    <ClCompile Include="..\src\ValueText.cpp" />
+    <ClCompile Include="..\src\ValueTrack.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\glint.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\About.h" />
+    <ClInclude Include="..\src\AutoPtr.h" />
+    <ClInclude Include="..\src\cdefs.h" />
+    <ClInclude Include="..\src\CountersListBox.h" />
+    <ClInclude Include="..\src\Errors.h" />
+    <ClInclude Include="..\src\Gadgets.h" />
+    <ClInclude Include="..\src\glint.h" />
+    <ClInclude Include="..\src\Globals.h" />
+    <ClInclude Include="..\src\GraphValues.h" />
+    <ClInclude Include="..\src\HelpDlg.h" />
+    <ClInclude Include="..\src\Indicator.h" />
+    <ClInclude Include="..\src\IndicatorSettings.h" />
+    <ClInclude Include="..\src\IndicatorToolTip.h" />
+    <ClInclude Include="..\src\IndSetDefs.h" />
+    <ClInclude Include="..\src\Label.h" />
+    <ClInclude Include="..\src\Panel.h" />
+    <ClInclude Include="..\src\PerfCount.h" />
+    <ClInclude Include="..\src\PerfData.h" />
+    <ClInclude Include="..\src\Processes.h" />
+    <ClInclude Include="..\src\ProcessWindow.h" />
+    <ClInclude Include="..\src\PropPageCounters.h" />
+    <ClInclude Include="..\src\PropPageGeneral.h" />
+    <ClInclude Include="..\src\PropPageIndicators.h" />
+    <ClInclude Include="..\src\RemoteConnectionDlg.h" />
+    <ClInclude Include="..\src\Resource.h" />
+    <ClInclude Include="..\src\SchemaSave.h" />
+    <ClInclude Include="..\src\Settings.h" />
+    <ClInclude Include="..\src\SettingsDlg.h" />
+    <ClInclude Include="..\src\StdAfx.h" />
+    <ClInclude Include="..\src\TrayIcon.h" />
+    <ClInclude Include="..\src\ValueMaxText.h" />
+    <ClInclude Include="..\src\ValueText.h" />
+    <ClInclude Include="..\src\ValueTrack.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\resource.hm" />
+    <None Include="..\src\Res\cursor1.cur" />
+    <None Include="..\src\res\cursor2.cur" />
+    <None Include="..\src\res\glint.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\src\res\glint.ico" />
+    <Image Include="..\src\res\icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\src\glint_read_me.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="..\src\glint.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
