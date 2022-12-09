@@ -11,11 +11,29 @@ Settings dialog allows to select available Windows system counters and tune thei
 ---
 ##    Screenshots
 
-![aaa ](/doc/glint_mini_lights.TIF "Mini-bar monitoring lights view:")
+![screen1](/doc/mainfraime_panel.JPG "Glint predecessor")
+Glint predecessor
 
-![bbb ](/doc/mainfraime_panel.JPG "Glint predecessor.")
+![screen2](/doc/glint_mini_lights.TIF "Mini-bar monitoring lights view")
+Mini-bar monitoring lights view
+
+![screen3](/doc/Glint_screenshot_0.gif "Column bars view")
+Column bars view.
+
+![screen4](/doc/Glint_screenshot_1.gif "Graphs View on remote computer")
+Graphs View on remote computer.
 
 ---
 ##    Building the program
 - Open solution file Project\glint.sln in Microsoft Visual Studio Community 2022 (64-bit).
 - Run Build command (F7).
+
+---
+##     Troubleshooting notes 
+
+-  System Performance counters in Registry must be available to the program for reading.  In case of doubt run Microsoft Performance monitor and if it gives error messages, run command: LODCTR /R  in command line window in Administrator mode to restore system counters.   
+
+- If some counters are not displaying (greyed or missing in Settings dialog), check their availability by command: LODCTR /Q 
+if they are disabled, enable them by command: LODCTR /E<service name>
+
+- If remote computer performance counters are not available, check that Remote Registry Service is running on the remote computer.
