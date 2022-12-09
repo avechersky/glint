@@ -11,16 +11,20 @@ Settings dialog allows to select available Windows system counters and tune thei
 ---
 ##    Screenshots
 
-![screen1](/doc/mainfraime_panel.JPG "Glint predecessor")
+![screen1](/doc/mainfraime_panel.JPG "Glint predecessor")  
+
 Glint predecessor
 
-![screen2](/doc/glint_mini_lights.TIF "Mini-bar monitoring lights view")
+![screen2](/doc/glint_mini_lights.TIF "Mini-bar monitoring lights view")  
+
 Mini-bar monitoring lights view
 
-![screen3](/doc/Glint_screenshot_0.gif "Column bars view")
+![screen3](/doc/Glint_screenshot_0.gif "Column bars view")  
+
 Column bars view.
 
-![screen4](/doc/Glint_screenshot_1.gif "Graphs View on remote computer")
+![screen4](/doc/Glint_screenshot_1.gif "Graphs View on remote computer")  
+
 Graphs View on remote computer.
 
 ---
@@ -31,9 +35,10 @@ Graphs View on remote computer.
 ---
 ##     Troubleshooting notes 
 
--  System Performance counters in Registry must be available to the program for reading.  In case of doubt run Microsoft Performance monitor and if it gives error messages, run command: LODCTR /R  in command line window in Administrator mode to restore system counters.   
+-  System Performance counters in Registry must be available to the program for reading.     
+ In case of doubt run Microsoft Performance monitor and if it gives error messages, run command: LODCTR /R  in command line window in  Administrator mode to restore system counters.
 
-- If some counters are not displaying (greyed or missing in Settings dialog), check their availability by command: LODCTR /Q 
-if they are disabled, enable them by command: LODCTR /E<service name>
+- If some counters are not displaying (greyed or missing in Settings dialog), check their availability by command: LODCTR /Q    
+If they are disabled, enable them by command: LODCTR /E<service name>
 
-- If remote computer performance counters are not available, check that Remote Registry Service is running on the remote computer.
+- If remote computer performance counters are not available, check that Remote Registry Service is running on the remote computer. 
