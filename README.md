@@ -6,7 +6,7 @@ Up to 200 indicators can be shown simultaneously.
 The program also displays most active processes in their descending activity order.
 When mouse hovers over processes pane, the most active processes for the last 60 seconds are shown in tooltip.
 Counter names with their current and maximum values are shown in tool tips. 
-Settings dialog allows to select available Windows system counters and tune their display modes. 
+Settings dialog allows to select available Windows system counters and set their display mode. 
 
 ---
 ##    Screenshots
